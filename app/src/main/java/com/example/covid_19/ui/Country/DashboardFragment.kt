@@ -1,4 +1,4 @@
-package com.example.covid_19.ui.dashboard
+package com.example.covid_19.ui.Country
 
 import android.os.Bundle
 import android.view.LayoutInflater
