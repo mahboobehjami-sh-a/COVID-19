@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.example.covid_19.ui.Country.DashboardFragment"
+        android:name="com.example.covid_19.ui.Country.CountryFragment"
         android:label="@string/title_country"
         tools:layout="@layout/fragment_dashboard" />
 </navigation>
