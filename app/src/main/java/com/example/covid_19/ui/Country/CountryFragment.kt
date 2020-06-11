@@ -1,3 +1,6 @@
+package com.example.covid_19.ui.Country
+
+
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -12,15 +15,13 @@ import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.example.covid_19.R
-import com.example.covid_19.ui.Country.CovidCountry
-import com.example.covid_19.ui.Country.CovidCountryAdapter
+import kotlinx.android.synthetic.main.fragment_country.*
 import org.json.JSONArray
 import org.json.JSONException
 import java.util.*
 
 
 class CountryFragment : Fragment() {
-    var rvCovidCountry: RecyclerView? = null
     var progressBar: ProgressBar? = null
     var covidCountries: ArrayList<CovidCountry>? = null
     override fun onCreateView(
@@ -30,7 +31,7 @@ class CountryFragment : Fragment() {
         val root: View = inflater.inflate(R.layout.fragment_country, container, false)
 
         //Call View
-        rvCovidCountry = root.findViewById(R.id.rvCovidCountry)
+        var rvCovidCountry = root.findViewById<RecyclerView>(R.id.rvCovidCountry)
         progressBar = root.findViewById(R.id.progress_circular_country)
         rvCovidCountry.setLayoutManager(LinearLayoutManager(activity))
 
@@ -40,14 +41,14 @@ class CountryFragment : Fragment() {
     }
 
     private fun showRecyclerView() {
-        val covidCountryAdapter = covidCountries?.let { CovidCountryAdapter(it) }
+        val covidCountryAdapter = CovidCountryAdapter(covidCountries!!)
         rvCovidCountry!!.adapter = covidCountryAdapter
     }
 
     private val dataFromServer: Unit
         private get() {
             val url = "https://corona.lmao.ninja/v2/countries"
-            covidCountries = ArrayList<CovidCountry>()
+            covidCountries = ArrayList()
             val stringRequest = StringRequest(
                 Request.Method.GET,
                 url,
