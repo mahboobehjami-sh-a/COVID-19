@@ -1,10 +1,25 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">#FF0000</item>
-        <item name="colorPrimaryDark">#8F8F8F</item>
-        <item name="colorAccent">#090909</item>
+        <item name="colorPrimary">#42FD34</item>
+        <item name="colorPrimaryDark">#FFFFFF</item>
+        <item name="colorAccent">#504F4F</item>
+    </style>
+    <style name="BottomNavigationView">
+        <item name="fontFamily"></item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <style name="LableFontStyle">
+        <item name="fontFamily"></item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TotalFontStyle">
+        <item name="fontFamily"></item>
+        <item name="android:textSize">36sp</item>
     </style>
 
 </resources>
