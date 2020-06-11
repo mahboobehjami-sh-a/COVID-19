@@ -40,7 +40,7 @@ class CountryFragment : Fragment() {
     }
 
     private fun showRecyclerView() {
-        val covidCountryAdapter = CovidCountryAdapter(covidCountries)
+        val covidCountryAdapter = covidCountries?.let { CovidCountryAdapter(it) }
         rvCovidCountry!!.adapter = covidCountryAdapter
     }
 

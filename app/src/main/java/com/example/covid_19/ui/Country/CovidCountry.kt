@@ -1,9 +1,11 @@
 package com.example.covid_19.ui.Country
 
 class CovidCountry(var mCovidCountry: String, var mCases: String) {
-    var mDeaths: String
-    var mTodayDeaths: String
-    var mRecoverd: String
+    lateinit var mDeaths: String
+    lateinit var mTodayDeaths: String
+    lateinit var mRecoverd: String
+
+
     fun getmCovidCountry(): String {
         return mCovidCountry
     }
